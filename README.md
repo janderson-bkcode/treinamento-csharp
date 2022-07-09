@@ -44,3 +44,71 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Conhecendo as IDE’s
    - Tipos de projeto
    - Debugando uma aplicação
+
+3. Linguagem de programação C# - 04 horas
+   - Escopo de um programa
+   - Namespace e usings
+   - Palavras reservadas
+   - Tipos primitivos
+   - Conversão implícita e explícita
+   - Operadores aritméticos
+   - Operadores de atribuição
+   - Operadores de comparação
+   - Operadores lógicos
+   - Funções e métodos
+   - Value Types and Reference Types
+
+4. Um pouco mais sobre C# - 03 horas
+   - Array
+   - Tipos Genéricos
+   - List, Lambda e LINQ
+   
+5. Fundamentos de Orientação a objetos - 08 horas
+   - Classes, atributos e métodos
+   - Entendendo um pouco mais sobre abstração, refletindo conceitos do mundo real
+   - Encapsulamento
+   - Herança
+   - Polimorfismo
+   
+6. GIT - 08 horas
+   - O que e o GIT e qual problema ele resolve?
+   - Iniciando os trabalhos com o GIT
+   - Como compartilhar meu trabalho com outros desenvolvedores?
+   - Trabalhando em equipe com o GIT
+   - Trabalhando com várias versões
+   - Realizar a entrega com o GIT
+   
+7. Criando no primeiro projeto WEB - 06 horas
+   - Estruturando o projeto
+   - Entendendo o modelo MVC
+   - Entendendo controllers
+   - Rotas, Controllers, não e tudo a mesma coisa?
+   - Configurando o acesso a dados com Dapper
+   - Criando operacoes com Dapper (Consultar, editar, excluir e inserir).
+   
+8. Vamos conversar sobre SOLID? - 08 horas
+   - S - Single Responsibility Principle
+   - O - Open Close Principle
+   - L - Liskov Substitution Principle
+   - I - Interface Segregation Principle
+   - D - Dependency Injection Principle
+   
+9. Criando um projeto de WEB API - 10 horas
+   - O que e uma API?
+   - Porque separar o backend do front end?
+   - Entendendo REST
+   - O que e HTTP e os seus verbos?
+   - O que e JSON?
+   - Iniciando nosso projeto de CRUD
+   - Separando os contextos dentro do nosso projeto
+   - Uso pastas ou um projeto de classes?
+   - Entendendo nosso domínio e criando diagrama de classes.
+   - Adicionado suporte ao entityframework core
+   - Criando o banco de dados
+   - Começando pelas controllers
+   - Serviços? Eu realmente preciso disso?
+   - Criando nossos repositórios
+   - Entendendo os retornos nas nossas controllers
+   - Documentando nossa API
+   - Refatorando e pensando em boas práticas
+   - Conclusão do treinamento
