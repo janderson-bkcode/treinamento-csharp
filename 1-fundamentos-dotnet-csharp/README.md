@@ -81,6 +81,8 @@ A CLR e responsavel por, gerenciar memoria, tratamento de excecao, acesso a recu
 
 Uma das vantagens de ser ter uma CLR eh que quase nao precisamos interageir com recursos de maquina e com isso nos sobra tempo para focar em regras de negocio da aplicacao.
 
+COLOCAR IMAGEM DO PROCESSO DE COMPILACAO
+
 # Referencias
 
 - [Documentacao Oficial C#](https://docs.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/)
