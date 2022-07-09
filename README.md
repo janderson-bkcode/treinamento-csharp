@@ -32,7 +32,7 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
 
 ## Programa/Modulos
 
-1. Fundamentos de .NET e C# - 02 horas
+1. [Fundamentos de .NET e C# - 02 horas](https://github.com/willianmenezes/treinamento-csharp/blob/main/1-fundamentos-dotnet-csharp/README.md)
 
    - O que é o .NET?
    - .NET 6, .NET Core ou .NET Framework?
