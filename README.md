@@ -31,3 +31,16 @@ A frequência é obrigatória. Para o aluno conseguir acompanhar a disciplina e 
 necessário uma frequência igual ou superior a 75% do tempo de ensino da disciplina.
 
 ## Programa/Modulos
+
+1. Fundamentos de .NET e C# - 02 horas
+
+   - O que é o .NET?
+   - .NET 6, .NET Core ou .NET Framework?
+   - C#, Fortemente tipado, Gerenciado e Compilado.
+
+2. Configuração do ambiente - 03 horas
+   - Instalação
+   - dotnet CLI
+   - Conhecendo as IDE’s
+   - Tipos de projeto
+   - Debugando uma aplicação
