@@ -1,22 +1,22 @@
 # O que e .NET?
 
-- Antes de tudo precisamos entender o que eh um framework, um framework eh um conjunto de bibliotecas/funcionalidades muito bem estruturadas que utilizamos para construir nossas aplicacoes, simplificando, nada mais eh do que um monte de codigo pronto para utilizarmos, sem precisar ficar reinventando a roda.
+Antes de tudo precisamos entender o que eh um framework, um framework eh um conjunto de bibliotecas/funcionalidades muito bem estruturadas que utilizamos para construir nossas aplicacoes, simplificando, nada mais eh do que um monte de codigo pronto para utilizarmos, sem precisar ficar reinventando a roda.
 
-- Utilizamos um framework para nao precisar construir tudo do 0.
+Utilizamos um framework para nao precisar construir tudo do 0.
 
-  - Exemplo: Em um aplicativo WEB com ASPNET, nao precisamos mapear o body de uma request, o framework ja faz isso automatico para nos.
+- Exemplo: Em um aplicativo WEB com ASPNET, nao precisamos mapear o body de uma request, o framework ja faz isso automatico para nos.
 
-  - Para criar paginas web com bootstrap/Meterialize, nao precisamos criar todo o html e css, existem diversos recursos que simplificam isso para nos.
+- Para criar paginas web com bootstrap/Meterialize, nao precisamos criar todo o html e css, existem diversos recursos que simplificam isso para nos.
 
-  - Para criar aplicacoes SPA(Single Page Application), podemos utilizar o Angular.
+- Para criar aplicacoes SPA(Single Page Application), podemos utilizar o Angular.
 
-- o .NET eh um framework criado pela microsoft por volta de 2001.
+O .NET eh um framework criado pela microsoft por volta de 2001.
 
-- Atualmente .NET eh uma plataforma/ambiente de desenvolvimento gratuita, multiplataforma e opensource.
+Atualmente .NET eh uma plataforma/ambiente de desenvolvimento gratuita, multiplataforma e opensource.
 
-- Com .NET podemos criar inumeros tipos de aplicativos, por exemplo: Aplicativos de console, Aplicativos WEB, APIs WEB, Microsservicos, Jogos, Desktop, Servicos de segundo plano (Workers), aprendizado de maquina e IOT.
+Com .NET podemos criar inumeros tipos de aplicativos, por exemplo: Aplicativos de console, Aplicativos WEB, APIs WEB, Microsservicos, Jogos, Desktop, Servicos de segundo plano (Workers), aprendizado de maquina e IOT.
 
-- O .NET possui uma alta performance e eh utilizado em producao por muitos aplicativos de pequena e grande escala.
+O .NET possui uma alta performance e eh utilizado em producao por muitos aplicativos de pequena e grande escala.
 
 # NET 6, .NET Core ou .NET Framework?
 
@@ -81,7 +81,7 @@ A CLR e responsavel por, gerenciar memoria, tratamento de excecao, acesso a recu
 
 Uma das vantagens de ser ter uma CLR eh que quase nao precisamos interageir com recursos de maquina e com isso nos sobra tempo para focar em regras de negocio da aplicacao.
 
-COLOCAR IMAGEM DO PROCESSO DE COMPILACAO
+![Dotnet Standart](./imagens/processo-compilacao.png)
 
 # Referencias
 
