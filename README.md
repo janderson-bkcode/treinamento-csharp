@@ -32,13 +32,14 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
 
 ## Programa/Modulos
 
-1. [Fundamentos de .NET e C# - 02 horas](https://github.com/willianmenezes/treinamento-csharp/blob/main/1-fundamentos-dotnet-csharp/README.md)
+1. [Fundamentos de .NET e C# - 02 horas](https://github.com/willianmenezes/treinamento-csharp/blob/main/01-fundamentos-dotnet-csharp/README.md)
 
    - O que é o .NET?
    - .NET 6, .NET Core ou .NET Framework?
    - C#, Fortemente tipado, Gerenciado e Compilado.
 
-2. Configuração do ambiente - 03 horas
+2. [Configuração do ambiente - 03 horas](https://github.com/willianmenezes/treinamento-csharp/blob/main/02-configuracao-ambiente/README.md)
+
    - Instalação
    - dotnet CLI
    - Conhecendo as IDE’s
@@ -46,6 +47,7 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Debugando uma aplicação
 
 3. Linguagem de programação C# - 04 horas
+
    - Escopo de um programa
    - Namespace e usings
    - Palavras reservadas
@@ -62,14 +64,12 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Array
    - Tipos Genéricos
    - List, Lambda e LINQ
-   
 5. Fundamentos de Orientação a objetos - 08 horas
    - Classes, atributos e métodos
    - Entendendo um pouco mais sobre abstração, refletindo conceitos do mundo real
    - Encapsulamento
    - Herança
    - Polimorfismo
-   
 6. GIT - 08 horas
    - O que e o GIT e qual problema ele resolve?
    - Iniciando os trabalhos com o GIT
@@ -77,7 +77,6 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Trabalhando em equipe com o GIT
    - Trabalhando com várias versões
    - Realizar a entrega com o GIT
-   
 7. Criando no primeiro projeto WEB - 06 horas
    - Estruturando o projeto
    - Entendendo o modelo MVC
@@ -85,14 +84,12 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Rotas, Controllers, não e tudo a mesma coisa?
    - Configurando o acesso a dados com Dapper
    - Criando operacoes com Dapper (Consultar, editar, excluir e inserir).
-   
 8. Vamos conversar sobre SOLID? - 08 horas
    - S - Single Responsibility Principle
    - O - Open Close Principle
    - L - Liskov Substitution Principle
    - I - Interface Segregation Principle
    - D - Dependency Injection Principle
-   
 9. Criando um projeto de WEB API - 10 horas
    - O que e uma API?
    - Porque separar o backend do front end?
