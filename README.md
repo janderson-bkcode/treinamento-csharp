@@ -43,6 +43,7 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Instalação
    - dotnet CLI
    - Conhecendo as IDE’s
+   - Instalando o Visual Studio
    - Tipos de projeto
    - Debugando uma aplicação
 
