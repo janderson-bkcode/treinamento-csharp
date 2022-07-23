@@ -189,6 +189,83 @@ No momento da instalacao selecione na caixa de selecao "Download all, then insta
 
 ## Tipos de projetos e dubugando nossa primeira aplicacao.
 
+Vamos conhecer agora alguns tipos de projetos que podemos criar com o Visual Studio.
+
+Vimos alguns exemplos atras que alguns desse projetos podemos criar tambem com a CLI do dotnet.
+
+As duas formas funcionam muito bem e podemos escolher a que melhor se encaixa no momento.
+
+Vamos la.
+
+Abra o Visual Studio e selecione "Create a new Project".
+
+## ![Instalador Visual Studio](imagens/newproject.png)
+
+Na tela que se abre podemos escolher o tipo de projeto que queremos trabalhar.
+
+## ![Instalador Visual Studio](imagens/select-project.png)
+
+Nesta tela podemos aplicar alguns filtros, sendo eles: Filtros de linguagens (C#, Javascript, C++), podemos tambem escolher a plataforma que desejamos (Android, Windows, Linux, MAC) e tambem podemos escolher o tipo de projeto (Console, Web API, ClassLib).
+
+Esses filtros sao bem uteis para ajudar a localizar a solucao ideal para o tipo de aplicacao que vamos construir.
+
+Ao lado esquerdo tambem tem um recurso muito util, que sao os ultimos projetos que selecionamos.
+
+Para este primeiro exemplo vamos selecionar o projeto do tipo Console.
+
+Para isso na barra de busca digite console. Depois do filtro, vai ser exibido alguns projetos do tipo console, cada projeto desse tem uma caracteristica diferente, alguns estao utilizando VB e F# como linguagem, outros estao utilizando alguma outra versao do framework dotnet.
+
+Vamos selecionar a primeira opcao, repare que ela esta mostrando que podemos trabalhar com esse projeto com C#, nos ambientes LINUX, MAC E Windows, sabemos que a nova versao do framework da microsoft eh multiplataforma entao, esta correta a selecao deste tipo de projeto.
+
+## ![Instalador Visual Studio](imagens/consoleapp.png)
+
+Na proxima tela podemos escolher o nome da nossa aplicacao, o local onde vamos salvar os arquivos da aplicacao e o nome da solucao.
+
+## ![Instalador Visual Studio](imagens/select-project.png)
+
+Se tivermos mais de uma versao do dotnet instalada, tambem podemos escolher a versao que vamos utilizar, podemos alterar isso posteriomente.
+
+## ![Instalador Visual Studio](imagens/versaodotnet.png)
+
+Criado o projeto, vamos criar um programa simples responsavel por somar dois numero e imprimir o resultado no console.
+
+```C#
+int primeiroNumero = 10;
+int segundoNumero = 10;
+int resultado = primeiroNumero + segundoNumero;
+Console.WriteLine(resultado);
+```
+
+A Saida desse programa sera 20.
+
+Antes de eecutar nosso projeto, podemos rodar o comando build, esse comando vai compilar nossa aplicacao e se conter algum erro em nossa aplicacao, como erro de sintaxe a compilacao ira falhar e a IDE ira mostrar para nos o motivo do erro.
+
+Por exemplo, altere o codigo para e clique em Build => Build solution
+
+```C#
+int primeiroNumero = 10;
+int segundoNumero = 10;
+int resultado = primeiroNumero + segundoNumero;
+Console.writeLine(resultado);
+```
+
+A propria IDE ira apontar que tem algum erro com o nosso codigo, veja:
+
+## ![Instalador Visual Studio](imagens/erroapp.png)
+
+Essas dicas sao muito uteis, assim nao precisamos compilar o projeto para corrigir o erro.
+
+o Resultado do build com erro sera esse aqui:
+
+## ![Instalador Visual Studio](imagens/erro.png)
+
+Basicamente digitamos incorretamente o comando WriteLine, apos corrigir a sintaxe do comando podemos executar novamente nossa aplicacao e vamos obter a saida 20 no console.
+
+Para executar basta clicar no Icone de "play" verde, com o nome da nossa aplicacao.
+
+Ao longo do treinamento, vamos aprender diversas funcionalidades do Visual Studio, inclusive vamos aprender a criar varias configuracoes para rodar nossa aplicacoes.
+
 # Referencias
 
 - [Documentacao Oficial .NET - dotnet CLI ](https://docs.microsoft.com/pt-br/dotnet/core/tools/)
+- [Documentacao Oficial .NET - Visual Studio ](https://docs.microsoft.com/en-us/visualstudio/get-started/visual-studio-ide?view=vs-2022)
