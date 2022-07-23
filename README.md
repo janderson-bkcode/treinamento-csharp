@@ -47,7 +47,7 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Tipos de projeto
    - Debugando uma aplicação
 
-3. Linguagem de programação C# - 04 horas
+3. [Linguagem de programação C# - 04 horas](https://github.com/willianmenezes/treinamento-csharp/blob/main/03-linguagem-programacao-C#/README.md)
 
    - Escopo de um programa
    - Namespace e usings
