@@ -227,6 +227,8 @@ Se tivermos mais de uma versao do dotnet instalada, tambem podemos escolher a ve
 
 ## ![Instalador Visual Studio](imagens/versaodotnet.png)
 
+## Debugando a aplicacao
+
 Criado o projeto, vamos criar um programa simples responsavel por somar dois numero e imprimir o resultado no console.
 
 ```C#
@@ -238,7 +240,7 @@ Console.WriteLine(resultado);
 
 A Saida desse programa sera 20.
 
-Antes de eecutar nosso projeto, podemos rodar o comando build, esse comando vai compilar nossa aplicacao e se conter algum erro em nossa aplicacao, como erro de sintaxe a compilacao ira falhar e a IDE ira mostrar para nos o motivo do erro.
+Antes de eecutar nosso projeto, podemos rodar o comando build, esse comando vai compilar nossa aplicacao e se conter algum erro, como erro de sintaxe a compilacao ira falhar e a IDE ira mostrar para nos o motivo do erro.
 
 Por exemplo, altere o codigo para e clique em Build => Build solution
 
@@ -262,6 +264,8 @@ o Resultado do build com erro sera esse aqui:
 Basicamente digitamos incorretamente o comando WriteLine, apos corrigir a sintaxe do comando podemos executar novamente nossa aplicacao e vamos obter a saida 20 no console.
 
 Para executar basta clicar no Icone de "play" verde, com o nome da nossa aplicacao.
+
+Podemos escolher em qual modo nossa aplicacao sera executada, sendo eles: Debug e Release.
 
 Ao longo do treinamento, vamos aprender diversas funcionalidades do Visual Studio, inclusive vamos aprender a criar varias configuracoes para rodar nossa aplicacoes.
 
