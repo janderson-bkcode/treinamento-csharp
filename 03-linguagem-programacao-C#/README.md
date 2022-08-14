@@ -68,8 +68,71 @@ Ou diretriz muito importantes sao as palavras reservadas da linguagem ou tambem 
 
 Podemos ver [AQUI](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/) uma lista com as keywords do C#.
 
+## Tipos primitivos
+
+Tipos primitivos ou "built-in types" sao tipos base em dotnet. Por exemplo, seu eu quero represetar um numero inteiro, nao preciso criar uma classe ou uma struct para fazer isso, no dotnet existe o tipo primitivo "int32" ou "int". Seguindo o mesmo exemplo, se quero represetar uma cadeia de caracteres podemos utilizar o tipo "string". Existem varios tipos primitivos na plataforma dotnet e podemos encontrar uma referencia deles [AQUI](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/builtin-types/built-in-types).
+
+## Tipos de valor
+
+Tipos de valor apresentam um comportamento diferente na CLR. Variaveis do tipo valor contem diretamente a instancia do seu tipo. Variaveis do tipo de valor nao alocam memoria na heap e nao acionam o coletor de lixo do dotnet.
+
+Quando passamos o valor de uma variavel para a outra, seu valor eh copiado, ficando cada uma das variaveis com valores independentes, ou seja, se alterar o valor de uma variavel nao altera o valor da outra.
+
+Tipos de valor nao podem receber a atribuicao de "null", a nao ser que transformemos ele em um valor anulavel com utilizando "?" depois do tipo: 
+
+```C#
+int? x = null;
+```
+
+Ha duas cateorias de tipo de valor: enum e struct.
+
+### Struct
+Os tipos numericos primirivos, built-in types sao structs e contem propriedades e metodos que podemos acessar, por exemplo
+
+```C#
+byte b = byte.MaxValue;
+```
+
+Nao podemos realizar heranca com tipos de valor.
+
+Podemos utilizar a palabvra chave "struct" para criar nossos proprios tipos, exemplo: 
+
+```C#
+public struct Coordenadas
+{
+    public int x, y;
+
+    public Coordenadas(int p1, int p2)
+    {
+        x = p1;
+        y = p2;
+    }
+}
+```
+
+### enum
+
+Um enum nada mais eh do que um conjunto de constantes integrais nomeadas, por exemplo: Queremos definir um conjunto de numero inteiros que expressam cores, para isso podemos fazer assim: 
+
+```C#
+public enum Cores
+{
+    Amarelo = 1,
+    Preto = 2,
+    Verde = 3,
+    Vermelho = 4,
+    Azul = 5,
+    Rosa = 6,
+}
+```
+
+## Tipos de referencia
+
+
+
 # Referencias
 
 - [Documentacao Oficial .NET - Using ](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/using-statement)
 - [Documentacao Oficial .NET - Namespaces ](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/namespace)
 - [Documentacao Oficial .NET - Keywords ](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/)
+- [Documentacao Oficial .NET - Tipos em C# ](https://docs.microsoft.com/pt-br/dotnet/csharp/fundamentals/types/)
