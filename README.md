@@ -58,8 +58,9 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Operadores de atribuição
    - Operadores de comparação
    - Operadores lógicos
+   - Estrutura condicional
    - Funções e métodos
-   - Value Types and Reference Types
+   - Value Types and Reference Types (Como funciona a alocacao de memoria)
 
 4. Um pouco mais sobre C# - 03 horas
    - Array
