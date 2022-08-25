@@ -58,7 +58,7 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Operadores de atribuição
    - Operadores de comparação
    - Operadores lógicos
-   - Estrutura condicional
+   - Estrutura condicional e lacos de repeticao
    - Funções e métodos
    - Value Types and Reference Types (Como funciona a alocacao de memoria)
 

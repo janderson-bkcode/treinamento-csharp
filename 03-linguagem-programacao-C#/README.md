@@ -457,6 +457,208 @@ Console.WriteLine(!true);    // output: False
 
 ## Estrutura condicional
 
+### Instrucao IF
+
+Muita vezes precisamos direcionar os caminhos para onde nossa aplicacao deve ir, por exemplo: Se o valor do salario do colaborador for maior que mil real aplicamos um regra para INSS, se for maior que dois mil outra regra e assim por diante. Na programacao podemos fazer isso com a instrucao IF.
+
+A instrucao IF avalia uma expressao boleana e caso essa expressao seja verdadeira executamos o bloco desejado.
+
+Podemos escrever o if de varias formas e vamos ver algumas a seguir.
+
+```C#
+// Utilizando o IF com uma parte ELSE
+
+var salario = 1000;
+
+if (salario > 500)
+{
+    Console.WriteLine("Preciso calcular uma regra de imposto.");
+} else
+{
+    Console.WriteLine("Nenhuma regra precisa ser aplicada.");
+}
+
+// continua.....
+```
+
+Quando criamos a instrucao com IF e ELSE apenas um dos blocos sera executado, com isso podemos definir caminhos bem estruturados na nossa aplicacao.
+
+```C#
+// Utilizando o IF sem o ELSE
+
+var salario = 1000;
+
+if (salario < 500)
+{
+    Console.WriteLine("Preciso calcular uma regra de imposto.");
+}
+
+// continua.....
+```
+
+```C#
+// Utilizando o IF sem o ELSE
+
+var salario = 1000;
+
+if (salario < 500)
+{
+    Console.WriteLine("Preciso calcular uma regra de imposto.");
+}
+
+// continua.....
+```
+
+Quando criamos o IF sem o ELSE apenas vamos executar o bloco abaixo do IF se a instrucao for verdadeira, do contrario o programa segue o seu fluxo normalmente.
+
+```C#
+// Utilizando o IF`s encadeados
+
+var salario = 1000;
+
+if (salario <= 1000)
+{
+    Console.WriteLine("Estou ganhando mal.");
+} else if (salario > 1000 && salario <= 2000){
+    Console.WriteLine("Estou ganhando mais ou menos.");
+} else {
+    Console.WriteLine("Estou ganhando bem.");
+}
+
+// continua.....
+```
+
+Dessa forma podemos criar diversos caminhos condicionais na nossa aplicacao, mas temos que tomar cuidado com isso, muito if`s encadeados podem deixar o codigo complexo de se ler, para resolver isso podemos utilizar uma outra estrutura condicional que vamos ver a frente.
+
+```C#
+var salario = 1000;
+
+string retorno = salario > 500 ? "Preciso calcular uma regra de imposto." : "Nenhuma regra precisa ser aplicada.";
+
+Console.WriteLine(retorno); // saida -> Preciso calcular uma regra de imposto.
+```
+
+Tambem podemos utilizar o IF de uma forma simplificada. Quando precisamos aplicar alguma condicao simples, podemos optar por utilizar o IF ternario.
+
+### Instrucao SWITCH
+
+Com uma instrucao switch, podemos definir um conjunto de instrucoes a serem executadas, e semelhante o IF o bloco so sera executado se correspodenr a expressao que estamos passando.
+
+Existem varias formas de se criar um switch, com padrao relacional, com padrao constante e etc, a forma que vamos ver abaixo eh a "convencional" que podemos encontrar em diversas linguagens de programacao.
+
+```C#
+var status = 1;
+
+switch (status)
+{
+    case 1:
+        Console.WriteLine("Separar pedido");
+        break;
+    case 2:
+        Console.WriteLine("Embalar pedido");
+        break;
+    case 3:
+        Console.WriteLine("Enviar pedido");
+        break;
+    default:
+        Console.WriteLine("Pedido encerrado");
+        break;
+}
+```
+
+## Lacos de repeticao
+
+Algumas vezes precisamos executar determinado codigo em nosso programa diversas vezes e para isso nao precisamos escrever aquele codigo a quantidade de vezes que queremos que ele execute, ou ate mesmo executar o programa a quantidade de vezes que precisamos. 
+
+Para resolver esse tipo de problema criaram-se os lacos de repeticao que executam um bloco de instrucao repetidas vezes.
+
+Vamos aprender e entender como esses lacos funcionam e ver alguns exemplos praticos.
+
+### Instrucao FOR
+
+A instrucao for, executa um bloco de codigo ate que a expressao boleana seja avaliada como false.
+
+Vejamos um exemplo pratico.
+
+```C#
+for (int i = 0; i < 3; i++)
+{
+    Console.WriteLine(i);
+}
+```
+OBS:
+
+**int i = 0 **-> Inicializador do for, declara e inicia a variavel i
+
+
+**i < 3** -> Condicao, determina se a proxima itecao do loop for deve ser executada.
+
+
+**i++** -> Iterador, define o que acontece apos a execucao do corpo do for, nesse nosso exemplo o iterador eh incrementado.
+
+O corpo do for, sera executado enquanto o valor de i for menor do que 3.
+
+### Instrucao FOREACH
+
+A instrucao foreach executa um bloco de codigo para cada elemento que esta contigo em uma "lista", como podemos ver no exemplo abaixo: 
+
+```C#
+var numeros = new List<int> { 1, 2, 3, 4 };
+foreach (int n in numeros)
+{
+    Console.Write($"{n} ");
+}
+// Output:
+// 1 2 3 4 
+```
+
+Neste exemplo temos um pouco menos de papeis.
+
+**numeros** -> Lista de inteiros
+
+**n** -> Cada elemento da lista de inteiros
+
+No foreach, enquato houver elementos na lista o corpo sera executado.
+
+### Instrucao DO
+
+A instrucao DO executa uma instrucao ou um bloco de instrucao enquanto a expressao boleana eh avaliada como TRUE.
+
+Como a expressao eh sempre avaliada apos o corpo do bloco DO, um loop do tipo DO eh sempre executado pelo menos uma vez. Vamos ver um exemplo:
+
+```C#
+int n = 0;
+do
+{
+    Console.Write(n);
+    n++;
+} while (n < 5);
+// Output:
+// 01234
+```
+
+Como podemos notar, a avaliacao da expressa eh realizada depois da execucao do corpo do loop, inferindo a regra de que SEMPRE um loop do tipo DO sera executado pelo menus uma vez.
+
+### Instrucao WHILE
+
+A instrucao WHILE executa uma instrucao ou um bloco de instrucao enquanto a expressao boleana eh avaliada como TRUE.
+
+Como a expressao eh sempre avaliada antes da execucao do corpo do bloco WHILE, um loop do tipo WHILE pode ser executado 0 ou mais vezes. Vamos ver um exemplo: 
+
+```C#
+int n = 0;
+while (n < 5)
+{
+    Console.Write(n);
+    n++;
+}
+// Output:
+// 01234
+```
+
+Como podemos notar, a avaliacao da expressa eh realizada antes da execucao do corpo do loop, inferindo a regra de que SEMPRE um loop do tipo WHILE sera executado 0 ou mais vezes.
+
+
 # Referencias
 
 - [Documentacao Oficial .NET - Using ](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/using-statement)
@@ -465,3 +667,6 @@ Console.WriteLine(!true);    // output: False
 - [Documentacao Oficial .NET - Tipos em C# ](https://docs.microsoft.com/pt-br/dotnet/csharp/fundamentals/types/)
 - [Documentacao Oficial .NET - Conversoes explicitas e implicitas ](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/types/casting-and-type-conversions)
 - [Documentacao Oficial .NET - Conversoes explicitas e implicitas (Tabela)](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/builtin-types/numeric-conversions#implicit-numeric-conversions)
+- [Documentacao Oficial .NET - IF e SWITCH](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/selection-statements)
+- [Documentacao Oficial .NET - Verificacao de padroes](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/operators/patterns)
+- [Documentacao Oficial .NET - Lacos de repeticao](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/iteration-statements)
