@@ -60,7 +60,6 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Operadores lógicos
    - Estrutura condicional e lacos de repeticao
    - Funções e métodos
-   - Value Types and Reference Types (Como funciona a alocacao de memoria)
 
 4. Um pouco mais sobre C# - 03 horas
    - Array

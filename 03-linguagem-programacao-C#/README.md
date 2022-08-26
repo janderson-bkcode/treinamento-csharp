@@ -86,7 +86,7 @@ Tipos de valor nao podem receber a atribuicao de "null", a nao ser que transform
 int? x = null;
 ```
 
-Ha duas cateorias de tipo de valor: enum e struct.
+Ha duas categorias de tipo de valor: enum e struct.
 
 ### Struct
 
@@ -98,7 +98,7 @@ byte b = byte.MaxValue;
 
 Nao podemos realizar heranca com tipos de valor.
 
-Podemos utilizar a palabvra chave "struct" para criar nossos proprios tipos, exemplo:
+Podemos utilizar a palavra chave "struct" para criar nossos proprios tipos, exemplo:
 
 ```C#
 public struct Coordenadas
@@ -658,6 +658,67 @@ while (n < 5)
 
 Como podemos notar, a avaliacao da expressa eh realizada antes da execucao do corpo do loop, inferindo a regra de que SEMPRE um loop do tipo WHILE sera executado 0 ou mais vezes.
 
+## Funcoes e metodos
+
+Quando escrevemos nossos programas, muitas vezes nao precisamos escrevelo inteiramente dentro de um unico arquivo, ou dentro apenas do metodo main.
+
+Na maioria das vezes queremos escrever um codigo que seja reutilizavel e que faca sentido a uma determinada regra.
+
+Por exemplo: Precisamos criar uma funcionalidade que calcule um aumento de 20% em um valor numerico.
+
+Escrevendo codigo de uma forma amadora, fariamos isso no momento de utilizar e se precisar realizar a mesma operacao precisariamos criar novamente.
+
+Mas sera que nao existe uma forma melhor de realizar essa operacao? Podendo reutilizar a qualquer momento? Existe.
+
+Uma funcao/metodo nada mais eh do que um bloco de codigo que realiza um conjunto de instrucoes, vamos ver alguns exemplo e entender a assinatura de uma funcao.
+
+```C#
+public static double AcrescentarAoValor(double valor, int porcentagem)
+{
+    return valor + (valor * porcentagem / 100);
+}
+```
+
+Defini a funcao que faz o calculo que comentei acima e nela temos alfumas coisas para entender, vamos esquecer por enquanto os termos "static" e "public".
+
+O valor "double" antes de "AcrescentarAoValor" eh o retorno dessa funcao. Se por um acaso nao quisermos retornar um valor, trocar o double por void (vazio, sem valor).
+
+"AcrescentarAoValor" eh o nome que estamos dando para a nossa funcao, toda vez que precisarmos chamar essa funcao, vamos usar esse nome.
+
+Entre os parenteses temos "double valor, int porcentagem" temos os paramentos de entrada de uma funcao, vamos utilizar esse valor para realizar nossas operacoes, conseguentemente todas vez que insiro um parametro em uma funcao ele se torna obrigatorio (nem sempre), e quem for chamar essa funcao precisa passar como argumentos os valores desses parametros.
+
+Vamos ver alguns exemplos utilizando a funcao que criamos acima: 
+
+```C#
+double valorSalario = 1000;
+double resultado = AcrescentarAoValor(valorSalario, 10);
+
+Console.WriteLine($"O valor do salario eh: {resultado}");
+
+// saida -> 1100
+```
+
+Criamos uma variavel com o valor de um salario, chamamos a nossa funcao passando o valor que queremos acrescentar 10%, essa funcao retornou o valor acrescido 10%.
+
+Se por um acaso quisessemos utilizar essa mesma funcao passando 20 para acrescentar 20% ao salario, isso seria perfeitamente possivel, veja: 
+
+```C#
+double valorSalario = 1000;
+double resultado = AcrescentarAoValor(valorSalario, 20);
+
+Console.WriteLine($"O valor do salario eh: {resultado}");
+
+// saida -> 1200
+```
+
+Funcao sao muito uteis em programacao e vamos utilizar muito esse recurso ao longo da nossa jornada.
+
+Existem muitas coisas para se aprender sobre metodos e funcao, vamos aprender um pouco de cada vez ao longo do curso.
+
+## Value Types e Reference Types
+
+Ja vimos um pouco sobre isso no conteudo acima, agora vamos explorar um pouco mais afundo como esses dois tipos de dados.
+
 
 # Referencias
 
@@ -670,3 +731,4 @@ Como podemos notar, a avaliacao da expressa eh realizada antes da execucao do co
 - [Documentacao Oficial .NET - IF e SWITCH](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/selection-statements)
 - [Documentacao Oficial .NET - Verificacao de padroes](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/operators/patterns)
 - [Documentacao Oficial .NET - Lacos de repeticao](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/iteration-statements)
+- [Documentacao Oficial .NET - Metodos](https://docs.microsoft.com/pt-br/dotnet/csharp/methods)
