@@ -61,7 +61,7 @@ necessário uma frequência igual ou superior a 75% do tempo de ensino da discip
    - Estrutura condicional e lacos de repeticao
    - Funções e métodos
 
-4. Um pouco mais sobre C# - 03 horas
+4. [Um pouco mais sobre C# - 03 horas](https://github.com/willianmenezes/treinamento-csharp/tree/main/04-um-pouco-mais-sobre-csharp)
    - Array
    - Tipos Genéricos
    - List, Lambda e LINQ
