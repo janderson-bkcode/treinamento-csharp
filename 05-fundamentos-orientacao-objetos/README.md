@@ -143,11 +143,147 @@ Em classes ainda podemos combinar alguns moficadores, mas nao vamos abordar isso
 
 ### Heranca
 
+Heranca nada mais eh do que a capacidade de uma classe, herdar os atributos de uma outra classe. O conceito parece simples, mas ao utiliza-lo podemos aplicar uma serie de funcionalidades a mais em nossas classes.
 
+Imagina que temos uma classe pessoa e ela possui apenas uma propriedade nome.
+
+```C#
+public class Pessoa 
+{
+    public string Nome { get; set; }
+}
+```
+
+E agora precisamos de uma representacao de uma pessoa juridica e de uma pessoa fisica.
+
+Poderiamos adicionar as propriedades na classe pessoa, mas isso nao seria uma ma pratica.
+
+Uma boa pratica nesse exemplo ficticio seria criar duas classes que representem uma pessoa fisica e uma juridica, dessa forma: 
+
+```C#
+public class PessoaFisica
+{
+    public string Cpf { get; set; }
+}
+
+public class PessoaJuridica
+{
+    public string Cnpj { get; set; }
+}
+```
+ Mas e a propriedade nome? Precisariamos adicionar em cada classe? Nao, podemos utilizar o recurso da heranca, onde as classes PessoaFisica e PessoaJuridica "herdam" a propriedade nome da classe Pessoa, dessa forma: 
+
+```C#
+public class PessoaFisica : Pessoa
+{
+    public string Cpf { get; set; }
+}
+
+public class PessoaJuridica : Pessoa
+{
+    public string Cnpj { get; set; }
+}
+```
+
+Nesse contexto  a classe Pessoa eh chamada de classe Pai ou entao de classe base.
+
+As classes PessoaFisica e PessoaJuridica, sao chamadas de classes filha ou subclasses.
+
+Dessa forma, podemos acessa a propriedade nome em uma intancia de pessoa fisica e juridica, assim: 
+
+```C#
+var pessoaFisica = new PessoaFisica();
+
+pessoaFisica.Nome = "Willian Menezes";
+```
+
+Ou seja, realizamos o conceito de heranca em nossas classes.
+
+Mas as nossa subclasses herdan apenas os atributos? Nao, podemos herdar tambem metodos da classe Pai.
+
+Vamos criar um metodo na classe Pessoa.
+
+```C#
+public class Pessoa
+{
+    public string Nome { get; set; }
+
+    public void ImprimirDados()
+    {
+        Console.WriteLine($"Nome: {Nome}");
+    }
+}
+
+// executando o metodo da classe pessoa
+
+var pessoa = new Pessoa();
+pessoa.Nome = "Willian Menezes";
+pessoa.ImprimirDados(); // saida -> Willian Menezes
+```
+
+Realizando a heranca nas subclasses, esse mesmo metodo funcionaria tranquilamente em ambas as subclasses, vejamos um exemplo: 
+
+```C#
+public class PessoaFisica : Pessoa
+{
+    public string Cpf { get; set; }
+
+    public void ImprimirDados()
+    {
+        Console.WriteLine($"Nome: {Nome}");
+    }
+}
+
+// executando o metodo da classe pessoa
+
+var pessoa = new PessoaFisica();
+pessoa.Nome = "Willian Menezes";
+pessoa.ImprimirDados(); // saida -> Willian Menezes
+```
+
+Mas e se quisessemos alterar esse metodo, ou que para cada classe ele criasse um output diferente? Veremos isso no proximo topico.
 
 ### Polimorfismo
 
+Polimorfismo eh um recurso que permite que variaveis de um mesmo tipo mais generico apotem para variaveis de tipos especificos diferentes, permitindo ter comportamentos diferentes de acordo com cada tipo.
 
-# Referencias
+Esse conceito se chama sobrescrita de metodo/propriedade e podemos fazer isso utilizando algumas palavras reservadas tanto na classe pai, quanto na subclasse.
 
-- []()
+Na classe pai, precisamos colocar em nosso metodo a palavra virtual.
+
+Essa palavra, informa para nosso programa que o metodo pode ser sobrescrito, ou seja, ele pode ter uma outra implementacao nas classes que herdarem a classe pai. Vejamos um exemplo: 
+
+```C#
+public class Pessoa
+{
+    public string Nome { get; set; }
+
+    public virtual void ImprimirDados()
+    {
+        Console.WriteLine($"Nome: {Nome}");
+    }
+}
+
+public class PessoaFisica
+{
+    public string Cpf { get; set; }
+
+    public override void ImprimirDados()
+    {
+        Console.WriteLine($"Nome: {Nome} - " + $"{Cpf}");
+    }
+}
+
+// executando o metodo da classe pessoa
+var pessoa = new Pessoa();
+pessoa.Nome = "Willian Menezes";
+pessoa.ImprimirDados(); // saida -> Willian Menezes
+
+// executando o metodo da classe pessoa fisica
+var pessoa = new PessoaFisica();
+pessoa.Nome = "Willian Menezes";
+pessoa.Cpf = "000.000.000-00";
+pessoa.ImprimirDados(); // saida -> Willian Menezes - 000.000.000-00
+```
+
+Com isso, podemos sobrescrever os metodos que estao marcados com o virtual, e criar nossa propria implementacao na classe derivada.
