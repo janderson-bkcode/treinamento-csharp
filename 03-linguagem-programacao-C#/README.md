@@ -533,7 +533,9 @@ Dessa forma podemos criar diversos caminhos condicionais na nossa aplicacao, mas
 ```C#
 var salario = 1000;
 
-string retorno = salario > 500 ? "Preciso calcular uma regra de imposto." : "Nenhuma regra precisa ser aplicada.";
+string retorno = salario > 500 
+    ? "Preciso calcular uma regra de imposto." 
+    : "Nenhuma regra precisa ser aplicada.";
 
 Console.WriteLine(retorno); // saida -> Preciso calcular uma regra de imposto.
 ```
