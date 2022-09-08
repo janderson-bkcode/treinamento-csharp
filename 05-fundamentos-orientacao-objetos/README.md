@@ -264,7 +264,7 @@ public class Pessoa
     }
 }
 
-public class PessoaFisica
+public class PessoaFisica : Pessoa
 {
     public string Cpf { get; set; }
 
